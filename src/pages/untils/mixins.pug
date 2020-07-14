@@ -1,0 +1,7 @@
+mixin sourcers(imgSet, widths)
+	- var i = 0;
+	each val in imgSet
+		source(type="image/webp" media=`(min-width: ${widths[i]})` srcset=`${val}`)
+		- i++;
+		if i > 2 
+			- i = 0;

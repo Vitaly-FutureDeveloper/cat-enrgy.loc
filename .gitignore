@@ -10,7 +10,9 @@ Thumbs.db
 # Вспомогательные файлы
 *.log*
 node_modules/
+beauty/
 
 # Папка с собранными файлами проекта
 build/
 packege-lock.json
+package-lock.json
