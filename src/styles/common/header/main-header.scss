@@ -1,0 +1,15 @@
+.logo-icon{
+	display: block;
+}
+.main-header{
+	border-bottom: 1px solid #e6e6e6;
+
+	z-index: 10;
+	
+	@include media-tablet {
+		border: none;
+	}
+}
+.main-header__link{
+	display: block;
+}

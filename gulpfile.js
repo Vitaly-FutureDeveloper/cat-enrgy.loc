@@ -5,6 +5,7 @@ const styles = require('./gulp/tasks/styles');
 const image = require('./gulp/tasks/image');
 const clean = require('./gulp/tasks/clean');
 const scripts = require('./gulp/tasks/scripts');
+const fonts = require('./gulp/tasks/fonts');
 const server = require('browser-sync').create();
 
 const pugBeauty = require('./gulp/tasks/pugBeauty');
@@ -12,10 +13,11 @@ const pugBeauty = require('./gulp/tasks/pugBeauty');
 module.exports.html = gulp.series(pug2html);
 module.exports.styles = gulp.series(styles);
 module.exports.js = gulp.series(scripts);
+module.exports.fonts = gulp.series(fonts);
 module.exports.img = gulp.parallel(image.minify, image.webp, image.sprite);
 module.exports.clean = gulp.series(clean.bind(null, 'build/img'));
 
-module.exports.pugBeauty = gulp.series(pugBeauty.bind(null, 'common/header'));
+module.exports.pugBeauty = gulp.series(pugBeauty.bind(null, 'includes/index/poster'));
 
 module.exports.serve = function (cb){
 	server.init({
@@ -30,10 +32,11 @@ module.exports.serve = function (cb){
 	gulp.watch('src/pages/**/*.pug', gulp.series(pug2html)).on('change', server.reload);
 
 	gulp.watch('src/scripts/**/*.js', gulp.series(scripts)).on('change', server.reload);
+	//gulp.watch('src/pages/**/*.scss', gulp.series(styles)).on('change', server.reload);
 
-	gulp.watch('src/pages/**/*.scss', gulp.series(styles, cb => gulp.src('build/css').pipe(server.sream()).on('end', cb)));
+	gulp.watch('src/styles/**/*.scss', gulp.series(styles, cb => gulp.src('build/css').pipe(server.stream()).on('end', cb)));
 
-	gulp.watch('build/*html').on('change', server.reload);
+	gulp.watch('build/*.html').on('change', server.reload);
 
 	return cb();
 };

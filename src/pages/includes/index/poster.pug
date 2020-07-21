@@ -1,0 +1,19 @@
+- 
+	var imgSet_indexcan = [
+		"img/index-can-desktop@2x.webp 2x, img/index-can-desktop@1x.webp 1x",
+		"img/index-can-tablet@2x.webp 2x, img/index-can-tablet@1x.webp 1x",
+		"img/index-can-mobile@2x.webp 2x, img/index-can-mobile@1x.webp 1x",
+		"img/index-can-desktop@2x.png 2x, img/index-can-desktop@1x.png 1x",
+		"img/index-can-tablet@2x.png 2x, img/index-can-tablet@1x.png 1x",
+		"img/index-can-mobile@2x.png 2x, img/index-can-mobile@1x.png 1x"
+	];
+
+.poster__wrapper
+	section.poster-under
+		h1.poster-under__header Функциональное <br> питание для котов
+		p.poster-under__text Занялся собой? Займись котом!
+		button.poster-button Подобрать программу
+	section.poster-over
+		picture.poster-over__image
+			+sourcers(imgSet_indexcan, mediaWidths)
+			img(src="img/index-can-desktop@1x.png" alt="Рисунок: банка корма")

@@ -11,6 +11,7 @@ Thumbs.db
 *.log*
 node_modules/
 beauty/
+DOCUMENTATION/
 
 # Папка с собранными файлами проекта
 build/

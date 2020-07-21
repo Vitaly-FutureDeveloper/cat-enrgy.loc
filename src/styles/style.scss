@@ -1,11 +1,24 @@
 @import 'untils/variables.scss';
+@import 'untils/fonts.scss';
+
 @import 'mixins/media.scss';
+@import 'mixins/buttons.scss';
+@import 'mixins/no-list-style.scss';
 
 
 @import 'common/global.scss';
 @import 'common/header.scss';
 
-
+@import 'blocks/poster.scss';
+@import 'blocks/advantages.scss';
+//@import 'blocks/';
+////@import 'blocks/';
+/////@import 'blocks/';
+/////@import 'blocks/';
+/////@import 'blocks/';
+/////@import 'blocks/';
+/////@import 'blocks/';
+/////@import 'blocks/';
 
 
 

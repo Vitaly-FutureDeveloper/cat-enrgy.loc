@@ -17,3 +17,10 @@
 		@content;
 	}
 }
+
+@mixin retina{
+	@media (min-resolution: $retina-dpi), (min-resolution: $retina-dpi) {
+		@content;
+	}
+}
+

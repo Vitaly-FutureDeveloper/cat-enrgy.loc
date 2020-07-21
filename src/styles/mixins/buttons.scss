@@ -1,0 +1,59 @@
+@mixin _buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	text-decoration: none;
+	box-sizing: border-box;
+	border: none;
+
+	cursor: pointer;
+}
+
+@mixin button-hide{
+	@include _buttons;
+
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+@mixin button-green {
+	@include _buttons;
+
+	color: #ffffff;
+	font-family: Oswald;
+	text-transform: uppercase;
+	background-color: #68b738;
+	
+	&:hover{
+		background-color: #5eaa2f;
+	}
+	&:focus{
+		background-color: #5eaa2f;
+	}
+	&:active{
+		color: rgba(255, 255, 255, 0.3);
+		background-color: #5eaa2f;
+	}
+}
+
+@mixin button-grey {
+	@include _buttons;
+	
+	color: #444444;
+	font-family: Oswald;
+	text-transform: uppercase;
+	background-color: #f2f2f2;
+	
+	&:hover{
+		background-color: #ebebeb;
+	}
+	&:focus{
+		background-color: #ebebeb;
+	}
+	&:active{
+		color: rgba(69, 69, 69, 0.3);
+		background-color: #ebebeb;
+	}
+}

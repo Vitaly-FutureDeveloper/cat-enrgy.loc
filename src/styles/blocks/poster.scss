@@ -1,0 +1,173 @@
+.poster__wrapper{
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	@include media-tablet {
+		margin-top: 25px;
+		margin-left: 118px;
+	}
+
+	@include media-laptop {
+		top: 0;
+		left: 0;
+
+		margin: 0;
+		padding: 0;
+
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.poster-under{
+	position: relative;
+
+	min-height: 305px;
+
+	background-color: #63a73a;
+	background-image: url("../img/index-background-mobile@1x.jpg");
+	background-repeat: no-repeat;
+	background-size: auto;
+
+	@include retina {
+		background-image: url("../img/index-background-mobile@2x.jpg");
+	}
+
+	@include media-tablet {
+		background: transparent;
+
+		z-index: 2;
+	}
+
+	@include media-laptop {
+		margin: 0;
+		padding: 0;
+
+		padding-top: 75px;
+		padding-left: 190px;
+
+		width: 720px;
+	}
+}
+
+.poster-under__header{
+	margin: 0;
+	padding: 0;
+
+	padding-top: 27px;
+	margin-bottom: 25px;
+
+	color: #ffffff;
+	font-family: Oswald;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 36px;
+
+	text-align: center;
+
+	@include media-tablet {
+		color: #111111;
+		font-size: 60px;
+		line-height: 60px;
+
+		text-align: left;
+	}
+
+	@include media-laptop {
+		//padding: 113px 83px;
+	}
+}
+
+.poster-under__text {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 14px;
+	text-transform: uppercase;
+
+	text-align: center;
+
+	@include media-tablet {
+		color: #111111;
+		font-size: 20px;
+		line-height: 20px;
+
+		text-align: left;
+
+		margin-top: 40px;
+	}
+}
+
+.poster-button{
+	position: absolute;
+	top: 438px;
+	left: 0;
+
+	@include button-green;
+
+	width: 88%;
+	height: 40px;
+	margin: 0 19px;
+
+	@include media-tablet {
+		position: relative;
+		top: 0;
+		left: 0;
+
+		font-size: 20px;
+
+		width: auto;
+		margin: 0;
+		padding: 25px 26px;
+
+		margin-top: 50px;
+	}
+}
+
+.poster-over{
+	position: relative;
+
+	top: -138px;
+	left: 20px;
+
+	background: transparent;
+
+	@include media-tablet {
+		top: -80px;
+		left: 80px;
+	}
+
+	@include media-laptop {
+		top: -121px;
+		left: 0;
+
+		margin: 0;
+		padding: 0;
+
+		//padding: 190px 328px 51px -30px;
+
+		width: 720px;
+		min-height: 696px;
+
+		background-color: #64a83b;
+
+		background-image: url("../img/index-background-desktop@1x.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@include retina {
+			background-image: url("../img/index-background-desktop@2x.jpg");
+		}
+	}
+}
+
+.poster-over__image{
+
+	@include media-laptop {
+		position: relative;
+		top: 190px;
+		left: -160px;
+	}
+}
