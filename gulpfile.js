@@ -9,6 +9,9 @@ const fonts = require('./gulp/tasks/fonts');
 const server = require('browser-sync').create();
 
 const pugBeauty = require('./gulp/tasks/pugBeauty');
+//Переменная для pugBeauty >>
+var beautyFile = 'includes/index/poster';
+//Переменная для pugBeauty <<
 
 module.exports.html = gulp.series(pug2html);
 module.exports.styles = gulp.series(styles);
@@ -17,7 +20,7 @@ module.exports.fonts = gulp.series(fonts);
 module.exports.img = gulp.parallel(image.minify, image.webp, image.sprite);
 module.exports.clean = gulp.series(clean.bind(null, 'build/img'));
 
-module.exports.pugBeauty = gulp.series(pugBeauty.bind(null, 'includes/index/poster'));
+module.exports.pugBeauty = gulp.series(pugBeauty.bind(null, beautyFile));
 
 module.exports.serve = function (cb){
 	server.init({
