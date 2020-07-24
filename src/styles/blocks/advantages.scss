@@ -1,45 +1,51 @@
 .advantages{
 	position: relative;
-	//top: -50px;
 }
 
 .advantages-list{
 	@include no-list-style;
+
+	display: grid;
+	grid-gap: 20px;
 }
 
 .advantage-side{
 	background-color: #f2f2f2;
+	padding: 0 20px 10px;
+	margin: 0 20px;
+
+	@include media-tablet {
+		padding: 45px 55px;
+	}
 }
 
-.advantages-list__header{
+.advantages-header{
 	position: relative;
 
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
-.advantages-list__item-header{
-	color: #111111;
-	font-family: Oswald;
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 37.02px;
-	text-transform: uppercase;
-}
 .advantages-icon__wrapper{
 	position: relative;
 
+	top: 0;
+	left: 0;
+
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
+
+	margin: 0;
+	padding: 0;
 
 	&::after{
 		content: "";
 
-		position: absolute;
+		position: relative;
 
-		top: 20%;
-		right: 10%;
+		top: 2%;
+		right: 50%;
 
 		width: 50px;
 		height: 51px;
@@ -49,7 +55,94 @@
 
 		z-index: 1;
 	}
+
+	@include media-tablet {
+		order: 1;
+
+		margin-left: 265px;
+		
+		&::after{
+			width: 200px;
+			height: 200px;
+		}
+	}
 }
 .advantages-list__icon{
+	@include sprite-viewport;
+
 	z-index: 2;
 }
+
+.advantages-list__item-header{
+	color: #111111;
+	font-family: Oswald;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 37.02px;
+	text-transform: uppercase;
+
+	margin-left: -30px;
+
+	@include media-tablet {
+		align-self: flex-start;
+
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 37.02px;
+		text-transform: uppercase;
+
+		margin: 0;
+		padding: 0;
+	}
+}
+.advantages-list__item-text{
+	color: #444444;
+	font-family: "Arial MT";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+
+	@include media-tablet {
+		position: relative;
+		top: -150px;
+		left: 0;
+
+		color: #444444;
+		font-size: 16px;
+		line-height: 24px;
+
+		width: 375px;
+	}
+}
+.advantages-link{
+	position: relative;
+
+	color: #111111;
+	font-family: Oswald;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 16px;
+	text-transform: uppercase;
+
+	&::after{
+		content: "";
+
+		position: absolute;
+
+		top: 4px;
+		right: -50px;
+
+		width: 40px;
+		height: 15px;
+
+		background-color: transparent;
+
+		background-image: url("../img/icon-right-arrow-verylong.svg");
+	}
+
+	@include media-tablet {
+		top: -110px;
+		left: 0;
+	}
+}
+

@@ -1,0 +1,29 @@
+@mixin sprite-viewport {
+	&.icon-mobile{
+		display: block;
+	}
+	&.icon-tablet,
+	&.icon-laptop{
+		display: none;
+	}
+
+	@include media-tablet {
+		&.icon-tablet{
+			display: block;
+		}
+		&.icon-mobile,
+		&.icon-laptop{
+			display: none;
+		}
+	}
+
+	@include media-laptop {
+		&.icon-laptop{
+			display: block;
+		}
+		&.icon-mobile,
+		&.icon-tablet{
+			display: none;
+		}
+	}
+}

@@ -2,9 +2,15 @@
 	position: relative;
 	top: 0;
 	left: 0;
+
+	height: 505px;
+	min-height: 505px;
+
 	z-index: 1;
 
 	@include media-tablet {
+		height: auto;
+
 		margin-top: 25px;
 		margin-left: 118px;
 	}
@@ -146,8 +152,6 @@
 		margin: 0;
 		padding: 0;
 
-		//padding: 190px 328px 51px -30px;
-
 		width: 720px;
 		min-height: 696px;
 
@@ -164,9 +168,14 @@
 }
 
 .poster-over__image{
+	position: relative;
+
+	@include media-tablet {
+		top: 15;
+		left: -140px;
+	}
 
 	@include media-laptop {
-		position: relative;
 		top: 190px;
 		left: -160px;
 	}
