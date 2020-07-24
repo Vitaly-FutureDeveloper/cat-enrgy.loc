@@ -10,35 +10,63 @@
 }
 
 .advantage-side{
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-template-columns: 1fr;
+
 	background-color: #f2f2f2;
 	padding: 0 20px 10px;
 	margin: 0 20px;
 
 	@include media-tablet {
-		padding: 45px 55px;
+		grid-template-rows: 50px 145px 100px;
+		padding: 45px 60px;
 	}
 }
 
 .advantages-header{
 	position: relative;
 
-	display: flex;
-	justify-content: flex-start;
+	display: grid;
+	grid-auto-columns: 1fr;
+	
+	grid-template-columns: 30% 60%;
+	justify-items: start;
+	align-items: center;
+	
+
+	@include media-tablet {
+		grid-template-columns: 65% 30%;
+	}
 }
 
 .advantages-icon__wrapper{
-	position: relative;
+	/*position: relative;
 
 	top: 0;
-	left: 0;
+	right: 0;
 
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	align-items: center;
+*/
+	display: grid;
+	grid-template-rows: 50px;
+	grid-template-columns: 50px;
+
+	justify-content: start;
+	align-items: center;
+
+	background-color: #68b738;
+	border-radius: 50%;
+	border: 1px solid #68b738;
+
+	width: 50px;
+	height: 50px;
 
 	margin: 0;
 	padding: 0;
-
+/*
 	&::after{
 		content: "";
 
@@ -55,20 +83,29 @@
 
 		z-index: 1;
 	}
-
+*/
 	@include media-tablet {
 		order: 1;
 
-		margin-left: 265px;
-		
+		grid-template-rows: 200px;
+		grid-template-columns: 200px;
+
+		width: 200px;
+		height: 200px;
+
+		//margin-left: 205px;
+		/*
 		&::after{
 			width: 200px;
 			height: 200px;
-		}
+		}*/
 	}
 }
 .advantages-list__icon{
 	@include sprite-viewport;
+
+	justify-self: center;
+	align-self: center;
 
 	z-index: 2;
 }
@@ -81,11 +118,13 @@
 	line-height: 37.02px;
 	text-transform: uppercase;
 
-	margin-left: -30px;
+	margin-bottom: 15px;
+	//padding: 0;
+
+	//margin-left: -20px;
 
 	@include media-tablet {
-		align-self: flex-start;
-
+		align-self: start;
 		font-size: 36px;
 		font-weight: 400;
 		line-height: 37.02px;
@@ -103,19 +142,22 @@
 	line-height: 18px;
 
 	@include media-tablet {
-		position: relative;
-		top: -150px;
-		left: 0;
-
 		color: #444444;
 		font-size: 16px;
 		line-height: 24px;
 
-		width: 375px;
+		max-width: 375px;
 	}
+}
+.advantages-list__item-link{
+	position: relative;
+	top: 0;
+	left: 0;
 }
 .advantages-link{
 	position: relative;
+	top: 0;
+	left: 0;
 
 	color: #111111;
 	font-family: Oswald;
@@ -129,20 +171,21 @@
 
 		position: absolute;
 
-		top: 4px;
+		top: 10px;
 		right: -50px;
 
-		width: 40px;
+		width: 30px;
 		height: 15px;
 
 		background-color: transparent;
 
 		background-image: url("../img/icon-right-arrow-verylong.svg");
+		background-repeat: no-repeat;
 	}
 
 	@include media-tablet {
-		top: -110px;
-		left: 0;
+		font-size: 20px;
+		line-height: 20px;
 	}
 }
 
