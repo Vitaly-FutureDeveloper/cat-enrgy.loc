@@ -1,5 +1,10 @@
 .advantages{
 	position: relative;
+
+	@include media-laptop {
+		top: -40px;
+		margin: 0 110px;
+	}
 }
 
 .advantages-list{
@@ -7,6 +12,11 @@
 
 	display: grid;
 	grid-gap: 20px;
+
+	@include media-laptop {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 80px;
+	}
 }
 
 .advantage-side{
@@ -22,6 +32,12 @@
 		grid-template-rows: 50px 145px 100px;
 		padding: 45px 60px;
 	}
+
+	@include media-laptop {
+		grid-template-rows: 90px 135px 50px;
+		padding: 52px 45px;
+	}
+
 }
 
 .advantages-header{
@@ -38,19 +54,19 @@
 	@include media-tablet {
 		grid-template-columns: 65% 30%;
 	}
+
+	@include media-laptop {
+		align-items: center;
+		align-content: center;
+		grid-template-columns: 30% 60%;
+
+
+	}
 }
 
 .advantages-icon__wrapper{
-	/*position: relative;
-
-	top: 0;
-	right: 0;
-
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-*/
 	display: grid;
+
 	grid-template-rows: 50px;
 	grid-template-columns: 50px;
 
@@ -66,24 +82,7 @@
 
 	margin: 0;
 	padding: 0;
-/*
-	&::after{
-		content: "";
 
-		position: relative;
-
-		top: 2%;
-		right: 50%;
-
-		width: 50px;
-		height: 51px;
-
-		background-color: #68b738;
-		border-radius: 50%;
-
-		z-index: 1;
-	}
-*/
 	@include media-tablet {
 		order: 1;
 
@@ -92,13 +91,16 @@
 
 		width: 200px;
 		height: 200px;
+	}
 
-		//margin-left: 205px;
-		/*
-		&::after{
-			width: 200px;
-			height: 200px;
-		}*/
+	@include media-laptop {
+		order: 0;
+
+		grid-template-rows: 100px;
+		grid-template-columns: 100px;
+
+		width: 100px;
+		height: 100px;
 	}
 }
 .advantages-list__icon{
@@ -119,9 +121,6 @@
 	text-transform: uppercase;
 
 	margin-bottom: 15px;
-	//padding: 0;
-
-	//margin-left: -20px;
 
 	@include media-tablet {
 		align-self: start;
@@ -132,6 +131,10 @@
 
 		margin: 0;
 		padding: 0;
+	}
+
+	@include media-tablet {
+		align-self: center;
 	}
 }
 .advantages-list__item-text{
@@ -147,6 +150,12 @@
 		line-height: 24px;
 
 		max-width: 375px;
+	}
+
+	@include media-laptop {
+		max-width: 444px;
+
+		margin-top: 40px;
 	}
 }
 .advantages-list__item-link{
