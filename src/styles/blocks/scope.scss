@@ -1,16 +1,16 @@
 .scope{
 	margin: 0 22px;
-	margin-top: -10px;
+	margin-top: -15px;
 
 	@include media-tablet {
 		margin: 30px;
 		margin-top: -40px;
-
-		border-bottom: 2px solid #e6e6e6;
+		margin-bottom: 15px;
 	}
 
 	@include media-laptop {
 		margin: 115px;
+
 		margin-top: -50px;
 	}
 }
@@ -39,7 +39,7 @@
 	@include no-list-style;
 
 	display: grid;
-	grid-row-gap: 5px;
+	grid-gap: 20px;
 
 	@include media-tablet {
 		grid-gap: 50px;
@@ -59,7 +59,7 @@
 	grid-template-rows: auto;
 	align-content: start;
 
-	grid-column-gap: 20px;
+	grid-gap: 20px;
 
 	@include media-tablet {
 		grid-gap: 30px;
@@ -81,13 +81,10 @@
 		height: 80px;
 	}
 }
-.scope-list__item-image{
-
-}
 
 .scope-list__item-text{
 	color: #444444;
-	font-family: "Arial MT", sans-serif;
+	font-family: "Arial MT", Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 18px;
@@ -98,5 +95,22 @@
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 24px;
+	}
+}
+
+.bottom-frame{
+	display: none;
+
+	color: #e6e6e6;
+
+	margin: 0;
+	padding: 0;
+
+	@include media-tablet {
+		display: block;
+	}
+
+	@include media-laptop {
+		display: none;
 	}
 }

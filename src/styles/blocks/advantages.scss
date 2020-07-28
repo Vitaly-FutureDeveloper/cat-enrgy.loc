@@ -137,17 +137,19 @@
 }
 .advantages-list__item-text{
 	color: #444444;
-	font-family: "Arial MT";
+	font-family: "Arial MT", Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 18px;
+
+	margin-bottom: 25px;
 
 	@include media-tablet {
 		color: #444444;
 		font-size: 16px;
 		line-height: 24px;
 
-		max-width: 375px;
+		max-width: 340px; //Временно, потом 375px
 
 		margin-bottom: 30px;
 	}
