@@ -12,6 +12,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-shorthand": "^1.1.0",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp4-run-sequence": "^1.0.1",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "pug": "^3.0.0"
@@ -42,14 +43,22 @@
     "gulp-webp": "^4.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run editorconfig && npm run stylelint",
+    "stylelint": "stylelint \"src/styles/**/*.scss\" --syntax scss",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
   },
+  "browserslist": [
+  	"last 2 versions",
+  	"IE 11",
+  	"Firefox ESR"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vitaly-FutureDeveloper/cat-enrgy.loc.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "VitaliyFutureDeveloper",
+  "license": "Free",
   "bugs": {
     "url": "https://github.com/Vitaly-FutureDeveloper/cat-enrgy.loc/issues"
   },
