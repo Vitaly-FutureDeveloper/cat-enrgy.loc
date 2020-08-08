@@ -1,0 +1,82 @@
+.invitation{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-auto-template: 1fr;
+
+	margin: 20px;
+	margin-top: 30px;
+
+	@include media-tablet {
+		grid-template-columns: 160px 160px;
+		grid-auto-template: 160px;
+		justify-content: space-between;
+
+		margin: 0 70px;
+		margin-top: -25px;
+	}
+
+	@include media-laptop {
+		position: relative;
+		top: 320px;
+		left: 40px;
+
+		width: 570px;
+
+		padding: 65px 80px;
+		margin-top: -55px;
+
+		background-color: #ffffff;
+
+		z-index: 5;
+	}
+}
+
+.invitation-text__invite{
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	text-transform: uppercase;
+
+	@include media-tablet {
+		color: #111111;
+		font-family: Oswald;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 25px;
+	}
+}
+
+.invitation-text__address{
+	color: #444444;
+	font-family: "Arial MT", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+
+	@include media-tablet {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+
+		text-align: right;
+	}
+
+	@include media-laptop {
+		text-align: left;
+	}
+}
+
+.address__city{
+	font: inherit;
+	
+	@include media-tablet {
+		display: block;
+		margin-top: 25px;
+
+		text-align: right;
+	}
+
+	@include media-laptop {
+		text-align: left;
+	}
+}

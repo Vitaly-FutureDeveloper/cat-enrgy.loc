@@ -46,7 +46,7 @@
     "test": "npm run editorconfig && npm run stylelint",
     "stylelint": "stylelint \"src/styles/**/*.scss\" --syntax scss",
     "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "start": "gulp serve"
   },
   "browserslist": [
   	"last 2 versions",

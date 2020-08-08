@@ -31,7 +31,7 @@ module.exports.serve = function (cb){
 		cors: true
 	});
 
-	gulp.watch('src/img/**/*.{gif,png,jpg,jpeg,svg,webp}', gulp.series(clean.bind(null, 'build/img'),gulp.parallel(image.minify, image.webp, image.sprite))).on('change', server.reload);
+	gulp.watch('src/img/**/*.{gif,png,jpg,jpeg,svg,webp}', gulp.parallel(image.minify, image.webp, image.sprite)).on('change', server.reload);
 
 	gulp.watch('src/pages/**/*.pug', gulp.series(pug2html)).on('change', server.reload);
 

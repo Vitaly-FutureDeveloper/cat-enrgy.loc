@@ -9,7 +9,8 @@
 	z-index: 1;
 
 	@include media-tablet {
-		height: auto;
+		height: 870px;
+		min-height: 870px;
 
 		margin-top: 25px;
 		margin-left: 118px;
@@ -19,11 +20,14 @@
 		top: 0;
 		left: 0;
 
-		margin: 0;
-		padding: 0;
-
 		display: flex;
 		justify-content: center;
+
+		height: 695px;
+		min-height: 695px;
+
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -170,13 +174,22 @@
 .poster-over__image{
 	position: relative;
 
+	width: 280px;
+	height: 270px;
+
 	@include media-tablet {
 		top: 15;
-		left: -140px;
+		left: -170px;
+
+		width: 710px;
+		height: 610px;
 	}
 
 	@include media-laptop {
 		top: 150px;
-		left: -160px;
+		left: -165px;
+
+		width: 550px;
+		height: 500px;
 	}
 }
