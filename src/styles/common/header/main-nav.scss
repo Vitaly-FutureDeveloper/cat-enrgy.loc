@@ -28,6 +28,9 @@
 }
 
 .main-nav__title{
+	transition-duration: 150ms;
+	transition-property: opacity;
+
 	&:hover,
 	&:focus{
 		opacity: 0.8;
@@ -38,7 +41,6 @@
 
 	@include sprite-viewport;
 }
-
 
 
 .main-nav__list{
@@ -52,8 +54,6 @@
 		flex-direction: row;
 		justify-content: space-around;
 	}
-
-	
 }
 
 .main-nav__toggle{
@@ -98,6 +98,9 @@
 
 	margin: 23px auto;
 
+	transition-duration: 150ms;
+	transition-property: opacity;
+
 	&:hover,
 	&:focus{
 		opacity: 0.6;
@@ -117,6 +120,9 @@
 			height: 2px;
 
 			background-color: #68b738;
+
+			transition-duration: 3s;
+			transition-property: width;
 		}
 	}
 
@@ -232,5 +238,5 @@
 }
 .site-list__item{
 	animation-name: animation-navigation;
-	animation-duration: 500ms;
+	animation-duration: 600ms;
 }

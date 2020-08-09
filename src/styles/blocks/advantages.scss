@@ -1,6 +1,5 @@
 .advantages{
 	position: relative;
-	//top: -50px;
 
 	@include media-laptop {
 		top: -40px;
@@ -188,21 +187,38 @@
 
 		position: absolute;
 
-		top: 10px;
-		right: -50px;
+		top: 11px;
+		left: 97px;
 
-		width: 30px;
+		width: 24px;
 		height: 15px;
 
 		background-color: transparent;
 
 		background-image: url("../img/icon-right-arrow-verylong.svg");
 		background-repeat: no-repeat;
+
+		transition-duration: 150ms;
+		transition-property: width, top;
 	}
+	
 
 	@include media-tablet {
 		font-size: 20px;
 		line-height: 20px;
+
+		&::after{
+			left: 130px;
+		}
+	}
+
+	&:hover::after, 
+	&:focus::after{
+		top: 10px;
+		width: 33px;
+	}
+	&:active{
+		opacity: 0.3;
 	}
 }
 
