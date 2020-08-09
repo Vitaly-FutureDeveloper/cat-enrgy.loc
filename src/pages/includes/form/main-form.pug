@@ -1,0 +1,59 @@
+section.form-block
+	form.main-form(action="server.php" method="POST")
+
+		fieldset.form-fields__options.form-fields
+			legend.visually-hidden Впишите кличку, возраст и вес
+			.field-option.field-block
+				label.field-option__label(for="input-name") Имя:*
+				input.field-option__input#input-name(type="text" name="name" placeholder="Барсик")
+			.field-option.field-block
+				label.field-option__label(for="input-weight") Вес (кг):*
+				input.field-option__input#input-weight(type="text" name="weight" placeholder="7")
+			.field-option.field-block
+				label.field-option__label(for="input-age") Возраст (лет):
+				input.field-option__input#input-age(type="text" name="age" placeholder="7")
+
+		fieldset.form-fields__radio.form-fields
+			legend.visually-hidden Выберите подходящее значение
+			.field-radio.field-block
+				label.field-radio__label(for="input-slim") Похудение
+				input.field-option__input#input-slim(type="radio" name="radio-option" value="slim")
+			.field-radio.field-block
+				label.field-radio__label(for="input-strong") Набор массы
+				input.field-option__input#input-strong(type="radio" name="radio-option" value="strong")
+			.field-radio.field-block
+				label.field-radio__label(for="input-advice") Не знаю (Нужен ваш совет)
+				input.field-option__input#input-advice(type="radio" name="radio-option" value="advice")
+
+		fieldset.form-fields__contact.form-fields
+			h3.fields-header Контактные данные <br> (владельца кота)
+			.field-contact.field-block
+				label.field-option__label(for="input-mail") E-mail:*
+				input.field-option__input#input-mail(type="mail" name="mail" placeholder="kuklachev@gmail.com")
+			.field-contact.field-block
+				label.field-option__label(for="input-tel") Телефон:*
+				input.field-option__input#input-tel(type="text" name="tel" placeholder="8 (960) 900-60-90")
+
+		fieldset.form-fields__comment.form-fields
+			h3.fields-header Комментарий
+			textarea.field-comment(name="comment")
+
+		fieldset.form-fields__additionally.form-fields
+			h3.fields-header Дополнительно
+			.field-check.field-block
+				label.field-check__label(for="input-substitute") Сахарозаменитель
+				input.field-option__input#input-substitute(type="checkbox" name="check-option[]" value="substitute" checked)
+			.field-check.field-block
+				label.field-check__label(for="input-water") Питьевая вода
+				input.field-option__input#input-water(type="checkbox" name="check-option[]" value="water")
+			.field-check.field-block
+				label.field-check__label(for="input-milk") Молоко
+				input.field-option__input#input-milk(type="checkbox" name="check-option[]" value="milk")
+			.field-check.field-block
+				label.field-check__label(for="input-vitamine") Витамины
+				input.field-option__input#input-vitamine(type="checkbox" name="check-option[]" value="vitamine")
+
+		fieldset.form-fields__submits.form-fields
+			button.main-form__submit(type="submit") Отправить заявку
+			p
+				small.submit-text * — Обязательные поля
