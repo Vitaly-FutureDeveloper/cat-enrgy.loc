@@ -16,14 +16,13 @@
 	}
 
 	@include media-laptop {
-		position: relative;
-		top: 320px;
+		position: absolute;
+		top: 100px;
 		left: 40px;
 
 		width: 570px;
 
 		padding: 65px 80px;
-		margin-top: -55px;
 
 		background-color: #ffffff;
 
