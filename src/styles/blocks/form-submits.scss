@@ -1,0 +1,68 @@
+.form-submits{
+	border: none;
+
+	padding: 20px;
+
+	@include media-tablet {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-between;
+
+		padding: 0 70px;
+
+		margin-top: -10px;
+		margin-bottom: 140px;
+	}
+
+	@include media-laptop {
+		padding: 0 110px;
+		margin-top: 0;
+
+		margin-bottom: 80px;
+	}
+}
+
+.main-form__submit{
+	@include button-green;
+
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+
+	width: 280px;
+	height: 40px;
+
+	@include media-tablet {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 20px;
+
+		width: 283px;
+		height: 52px;
+	}
+
+	@include media-laptop {
+		width: 568px;
+		height: 52px;
+	}
+}
+
+.submit-text{
+	color: #444444;
+	font-family: "Arial MT", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16px;
+
+	text-align: center;
+
+	margin-right: 25px;
+
+	@include media-tablet {
+		text-align: left;
+	}
+
+	@include media-laptop {
+		margin-left: 30px;
+	}
+}

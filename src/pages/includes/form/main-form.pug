@@ -1,0 +1,72 @@
+//svg sprite for .form-contact E-mail:*, Телефон:*
+
+svg(style="display:none")
+	
+	symbol#icon-mail <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 13"><path d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z"/></svg>
+
+	symbol#icon-phone <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z"/></svg>
+
+
+section.form-block
+	form.main-form(action="server.php" method="POST")
+
+		fieldset.form-options.form-fields
+			legend.visually-hidden Впишите кличку, возраст и вес
+			.field-option.field-block
+				label.field-option__label.form-label(for="input-name") Имя:*
+				input.field-option__input#input-name(type="text" name="name" placeholder="Барсик")
+			.field-option.field-block
+				label.field-option__label.form-label(for="input-weight") Вес (кг):*
+				input.field-option__input#input-weight(type="text" name="weight" placeholder="7")
+			.field-option.field-block
+				label.field-option__label.form-label(for="input-age") Возраст (лет):
+				input.field-option__input#input-age(type="text" name="age" placeholder="7")
+
+		fieldset.form-radios.form-fields
+			legend.visually-hidden Выберите подходящее значение
+			.field-radio.field-block
+				input.field-radio__input#input-slim(type="radio" name="radio-option" value="slim" checked)
+				label.field-radio__label.form-label(for="input-slim") Похудение
+			.field-radio.field-block
+				input.field-radio__input#input-strong(type="radio" name="radio-option" value="strong")
+				label.field-radio__label.form-label(for="input-strong") Набор массы
+			.field-radio.field-block
+				input.field-radio__input#input-advice(type="radio" name="radio-option" value="advice")
+				label.field-radio__label.form-label(for="input-advice") Не знаю (Нужен ваш совет)
+
+		fieldset.form-contact.form-fields
+			h3.fields-header__contact Контактные данные <br> (владельца кота)
+			.field-contact.field-block
+				label.field-contact__label.form-label(for="input-mail") E-mail:*
+				input.field-contact__input#input-mail(type="mail" name="mail" placeholder="kuklachev@gmail.com")
+				svg.icon-input(width="17" height="13")
+					use(xlink:href="#icon-mail")
+			.field-contact.field-block
+				label.field-contact__label.form-label(for="input-tel") Телефон:*
+				input.field-contact__input#input-tel(type="text" name="tel" placeholder="8 (960) 900-60-90")
+				svg.icon-input(width="20" height="20")
+					use(xlink:href="#icon-phone")
+
+		fieldset.form-comment.form-fields
+			h3.fields-header__comment Комментарий
+			textarea.field-comment(name="comment" placeholder="Расскажите обо всех повадках кота")
+
+		fieldset.form-additionally.form-fields
+			h3.fields-header__additionally Дополнительно
+			.field-check.field-block
+				input.field-check__input#input-substitute(type="checkbox" name="check-option[]" value="substitute" checked)
+				label.field-check__label.form-label(for="input-substitute") Сахарозаменитель
+			.field-check.field-block
+				input.field-check__input#input-water(type="checkbox" name="check-option[]" value="water")
+				label.field-check__label.form-label(for="input-water") Питьевая вода
+			.field-check.field-block
+				input.field-check__input#input-milk(type="checkbox" name="check-option[]" value="milk")
+				label.field-check__label.form-label(for="input-milk") Молоко
+			.field-check.field-block
+				input.field-check__input#input-vitamine(type="checkbox" name="check-option[]" value="vitamine")
+				label.field-check__label.form-label(for="input-vitamine") Витамины
+
+		fieldset.form-submits.form-fields
+			button.main-form__submit(type="submit") Отправить заявку
+			
+			small.submit-text * — Обязательные поля

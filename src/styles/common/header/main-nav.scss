@@ -153,6 +153,22 @@
 	}
 }
 
+/*
+Перекрашивание текста навигации на других страницах десктопа >>
+ */
+
+.inner-page .site-list__link{
+	@include media-laptop {
+		color: #111111;
+
+		&--active{
+			&::after{
+				background-color: #68b738;
+			}
+		}
+	}
+}
+
 .main-nav--closed .main-nav__toggle{
 	&::before{
 		content: "";

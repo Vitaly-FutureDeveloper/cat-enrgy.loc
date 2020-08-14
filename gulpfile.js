@@ -16,7 +16,7 @@ var beautyFile = 'includes/index/poster';
 
 module.exports.html = gulp.series(pug2html);
 module.exports.styles = gulp.series(styles);
-module.exports.js = gulp.series(scripts);
+module.exports.scripts = gulp.series(scripts);
 module.exports.fonts = gulp.series(fonts);
 module.exports.img = gulp.parallel(image.minify, image.webp, image.sprite);
 module.exports.clean = gulp.series(clean.bind(null, 'build/'));
@@ -36,7 +36,6 @@ module.exports.serve = function (cb){
 	gulp.watch('src/pages/**/*.pug', gulp.series(pug2html)).on('change', server.reload);
 
 	gulp.watch('src/scripts/**/*.js', gulp.series(scripts)).on('change', server.reload);
-	//gulp.watch('src/pages/**/*.scss', gulp.series(styles)).on('change', server.reload);
 
 	gulp.watch('src/styles/**/*.scss', gulp.series(styles, cb => gulp.src('build/css').pipe(server.stream()).on('end', cb)));
 	gulp.watch('src/fonts/*.*', gulp.series(fonts)).on('change', server.reload);
