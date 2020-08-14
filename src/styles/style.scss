@@ -5,6 +5,7 @@
 @import 'mixins/buttons.scss';
 @import 'mixins/no-list-style.scss';
 @import 'mixins/sprites-viewport.scss';
+@import 'mixins/visually-hidden';
 
 
 @import 'common/global.scss';
@@ -14,9 +15,16 @@
 @import 'blocks/advantages.scss';
 @import 'blocks/scope.scss';
 @import 'blocks/example-slider.scss';
+
 @import 'blocks/form-head.scss';
-/////@import 'blocks/';
-/////@import 'blocks/';
+@import 'blocks/form-global.scss';
+@import 'blocks/form-options.scss';
+@import 'blocks/form-radios.scss';
+@import 'blocks/form-contact.scss';
+@import 'blocks/form-comment.scss';
+@import 'blocks/form-additionally.scss';
+@import 'blocks/form-submits.scss';
+//@import 'blocks/';
 
 
 

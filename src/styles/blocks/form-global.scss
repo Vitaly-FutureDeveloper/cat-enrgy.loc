@@ -1,0 +1,89 @@
+.form-options {grid-area: options;}
+.form-radios {grid-area: radios;}
+.form-contact {grid-area: contact;}
+.form-comment {grid-area: comment;}
+.form-additionally {grid-area: additionally;}
+.form-submits {grid-area: submits;}
+
+.main-form{
+	display: grid;
+	grid-gap: 10px;
+
+	@include media-tablet {
+		grid-gap: 70px;
+	}
+
+	@include media-laptop {
+		grid-template-areas:
+			"options radios"
+			"contact contact"
+			"comment comment"
+			"additionally additionally"
+			"submits submits"
+	}
+}
+
+.form-label{
+	color: #222222;
+	font-family: Oswald;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 18px;
+	text-transform: uppercase;
+
+	white-space: nowrap;
+	margin-right: 15px;
+
+	@include media-tablet {
+		font-size: 20px;
+		line-height: 20px;
+	}
+}
+
+.form-fields{
+	display: grid;
+	grid-gap: 15px;
+	align-items: center;
+
+	@include media-tablet {
+		grid-gap: 27px;
+	}
+
+	@include media-laptop {
+		grid-gap: 15px;
+	}
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="mail"]{
+	height: 45px;
+	border: 1px solid rgba(204, 204, 204, 0.5);
+
+	padding: 15px;
+
+	color: #444444;
+	font-family: Oswald;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 18px;
+	text-transform: uppercase;
+
+	@include media-tablet {
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	&::placeholder{
+		opacity: 1;
+	}
+
+	&:hover{
+		border-color: #cdcdcd;
+	}
+	&:focus, 
+	&:active{
+		border: 2px solid #444444;
+	}
+}
+

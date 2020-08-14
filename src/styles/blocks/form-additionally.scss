@@ -1,0 +1,150 @@
+.form-additionally{
+	border: none;
+	position: relative;
+
+	display: grid;
+	grid-gap: 25px;
+
+	& input{
+		@include visually-hidden;
+	}
+
+	@include media-tablet {
+		.fields-header__additionally{
+			//grid-column: 1 / 3;
+		}
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 50px;
+		padding: 0 70px;
+	}
+
+	@include media-laptop {
+		//grid-gap: 25px;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		padding: 0 110px;
+	}
+}
+
+.fields-header__additionally{
+	position: relative;
+	top: 0;
+	left: 0;
+
+	color: #111111;
+	font-family: Oswald;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 24px;
+
+	margin: 10px 5px;
+
+	&::after{
+		content: "";
+
+		position: absolute;
+		top: 15px;
+		right: 14px;
+
+		width: 43%;
+		height: 3px;
+
+		background-color: #68b738;
+	}
+
+	@include media-tablet {
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 36px;
+
+		margin: 0;
+		margin-bottom: 20px;
+
+		&::after{
+			top: 20px;
+			right: -70px;
+
+			width: 76%;
+		}
+
+		&::before{
+			content: "";
+
+			position: absolute;
+			top: 20px;
+			left: -71px;
+
+			width: 5%;
+			height: 3px;
+
+			background-color: #68b738;
+		}
+	}
+
+	@include media-laptop {
+		grid-column: 1 / 5;
+
+		&::after{
+			top: 19px;
+			right: -110px;
+
+			width: 88%;
+		}
+
+		&::before{
+			top: 19px;
+			left: -110px;
+
+			width: 5%;
+			height: 3px;
+		}
+	}
+}
+
+.field-check__input + .field-check__label{
+	position: relative;
+
+	padding-left: 50px;
+
+	&::before{
+		content: "";
+
+		position: absolute;
+		top: 0;
+		left: 5px;
+
+		width: 30px;
+		height: 30px;
+
+		border: 1px solid #cdcdcd;
+		box-shadow: 1px 1px #cdcdcd;
+	}
+
+	&:hover::before,
+	&:focus::before{
+		border-color: #bababa;
+	}
+	&:active{
+		opacity: 0.3;
+	}
+}
+
+.field-check__input:checked + .field-check__label{
+	position: relative;
+
+	padding-left: 50px;
+
+	&::after{
+		content: "";
+
+		position: absolute;
+		top: 5px;
+		left: 10px;
+
+		width: 21px;
+		height: 16px;
+
+		background-image: url("../img/icon-tick.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}

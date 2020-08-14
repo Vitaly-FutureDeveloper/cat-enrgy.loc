@@ -1,0 +1,127 @@
+.form-comment{
+	border: none;
+
+	@include media-tablet {
+		grid-gap: 70px;
+
+		padding: 0 70px;
+	}
+
+	@include media-laptop {
+		padding: 0 110px;
+	}
+}
+
+.fields-header__comment{
+	position: relative;
+	top: 0;
+	left: 0;
+
+	color: #111111;
+	font-family: Oswald;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 24px;
+
+	margin: 10px 0;
+	margin-bottom: 15px;
+
+	&::after{
+		content: "";
+
+		position: absolute;
+		top: 15px;
+		right: 10px;
+
+		width: 49%;
+		height: 3px;
+
+		background-color: #68b738;
+	}
+
+	@include media-tablet {
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 36px;
+
+		margin: 0;
+
+		&::after{
+			top: 20px;
+			right: -70px;
+
+			width: 76%;
+		}
+
+		&::before{
+			content: "";
+
+			position: absolute;
+			top: 20px;
+			left: -71px;
+
+			width: 5%;
+			height: 3px;
+
+			background-color: #68b738;
+		}
+	}
+
+	@include media-laptop {
+		&::after{
+			top: 19px;
+			right: -110px;
+
+			width: 90%;
+		}
+
+		&::before{
+			top: 19px;
+			left: -110px;
+
+			width: 5%;
+			height: 3px;
+		}
+	}
+}
+
+.field-comment{
+	color: #444444;
+	font-family: Oswald;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 18px;
+	text-transform: uppercase;
+
+	width: 280px;
+	height: 150px;
+	border: 1px solid rgba(204, 204, 204, 0.5);
+
+	padding: 15px 11px;
+
+	&::placeholder{
+		opacity: 1;
+	}
+
+	@include media-tablet {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 30px;
+
+		width: 631px;
+		height: 174px;
+
+		padding: 15px;
+	}
+
+	@include media-laptop {
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 30px;
+
+		width: 1220px;
+		height: 174px;
+
+		padding: 15px;
+	}
+}
