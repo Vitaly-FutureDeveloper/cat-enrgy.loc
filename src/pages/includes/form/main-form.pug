@@ -14,13 +14,13 @@ section.form-block
 			legend.visually-hidden Впишите кличку, возраст и вес
 			.field-option.field-block
 				label.field-option__label.form-label(for="input-name") Имя:*
-				input.field-option__input#input-name(type="text" name="name" placeholder="Барсик")
+				input.field-option__input#input-name(type="text" name="name" placeholder="Барсик" min="1" max="50" required)
 			.field-option.field-block
 				label.field-option__label.form-label(for="input-weight") Вес (кг):*
-				input.field-option__input#input-weight(type="text" name="weight" placeholder="7")
+				input.field-option__input#input-weight(type="text" name="weight" placeholder="7" min="0.05" max="50" required)
 			.field-option.field-block
 				label.field-option__label.form-label(for="input-age") Возраст (лет):
-				input.field-option__input#input-age(type="text" name="age" placeholder="7")
+				input.field-option__input#input-age(type="text" name="age" max="30" placeholder="7")
 
 		fieldset.form-radios.form-fields
 			legend.visually-hidden Выберите подходящее значение
@@ -38,12 +38,12 @@ section.form-block
 			h3.fields-header__contact Контактные данные <br> (владельца кота)
 			.field-contact.field-block
 				label.field-contact__label.form-label(for="input-mail") E-mail:*
-				input.field-contact__input#input-mail(type="mail" name="mail" placeholder="kuklachev@gmail.com")
+				input.field-contact__input#input-mail(type="email" name="mail" placeholder="kuklachev@gmail.com" required)
 				svg.icon-input(width="17" height="13")
 					use(xlink:href="#icon-mail")
 			.field-contact.field-block
 				label.field-contact__label.form-label(for="input-tel") Телефон:*
-				input.field-contact__input#input-tel(type="text" name="tel" placeholder="8 (960) 900-60-90")
+				input.field-contact__input#input-tel(type="text" name="tel" placeholder="8 (960) 900-60-90" pattern="[0-9]{5,15}" required)
 				svg.icon-input(width="20" height="20")
 					use(xlink:href="#icon-phone")
 

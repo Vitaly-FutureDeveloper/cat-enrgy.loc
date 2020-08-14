@@ -95,3 +95,8 @@ input[type="mail"]{
 	}
 }
 
+input[type="text"]:invalid,
+input[type="tel"]:invalid,
+input[type="mail"]:invalid{
+	border: 2px solid #ff8282;
+}

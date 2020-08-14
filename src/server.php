@@ -1,2 +1,3 @@
 <?php
-	var_dump($_REQUEST);
+	echo "<pre>";
+	print_r($_REQUEST);
