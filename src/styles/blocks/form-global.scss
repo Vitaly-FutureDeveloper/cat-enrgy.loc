@@ -9,6 +9,14 @@
 	display: grid;
 	grid-gap: 10px;
 
+	grid-template-areas:
+		"options"
+		"radios"
+		"contact"
+		"comment"
+		"additionally"
+		"submits";
+
 	@include media-tablet {
 		grid-gap: 70px;
 	}
@@ -19,7 +27,7 @@
 			"contact contact"
 			"comment comment"
 			"additionally additionally"
-			"submits submits"
+			"submits submits";
 	}
 }
 
