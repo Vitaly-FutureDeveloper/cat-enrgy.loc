@@ -16,12 +16,12 @@ module.exports = function scripts(cb){
 		//.pipe(eslint())
 		//.pipe(eslint.format())
 		.pipe(concat('main.js'))
-		.pipe(sourcemaps.init())
+	/*	.pipe(sourcemaps.init())
 		.pipe(babel({
 			presets: ['@babel/env']
 		}))
 		.pipe(terser())
-		.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write())*/
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('build/js'))
 	return cb()
