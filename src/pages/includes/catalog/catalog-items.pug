@@ -1,0 +1,34 @@
+- 
+	var imgSet_indexcan = [
+		"img/index-can-desktop@2x.webp 2x, img/index-can-desktop@1x.webp 1x",
+		"img/index-can-tablet@2x.webp 2x, img/index-can-tablet@1x.webp 1x",
+		"img/index-can-mobile@2x.webp 2x, img/index-can-mobile@1x.webp 1x",
+		"img/index-can-desktop@2x.png 2x, img/index-can-desktop@1x.png 1x",
+		"img/index-can-tablet@2x.png 2x, img/index-can-tablet@1x.png 1x",
+		"img/index-can-mobile@2x.png 2x, img/index-can-mobile@1x.png 1x"
+	];
+
+section.catalog-items
+	ul.catalog-list
+		li.catalog-list__item
+			//-picture
+				+image_full(imgSet_indexcan, mediaWidths)
+				img.catalog-list__image(src="img/index-can-desktop@1x.png" alt="Рисунок: банка корма")
+
+			h3.catalog-list__header 
+			.catalog-list__options
+				table.catalog-list__table
+					tr.table-col
+						td.table-row Объем
+						td.table-row 500 г
+					tr.table-col
+						td.table-row Вкус
+						td.table-row Курица
+					tr.table-col
+						td.table-row Цена
+						td.table-row 700 Р.
+
+
+			a.catalog-list__button Заказать
+				
+
