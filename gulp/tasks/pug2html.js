@@ -10,8 +10,8 @@ module.exports = function pug2html(cb) {
 	return gulp.src('src/pages/*.pug')
 	.pipe(plumber())
 	.pipe(pug())
-	.pipe(htmlValidator())
-	.pipe(bemValidator())
+	//.pipe(htmlValidator())
+	//.pipe(bemValidator())
 	.pipe(beautify_html({
 		"indent_size": 2
 	}))
