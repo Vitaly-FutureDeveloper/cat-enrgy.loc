@@ -49,9 +49,9 @@
     "start": "gulp serve"
   },
   "browserslist": [
-  	"last 2 versions",
-  	"IE 11",
-  	"Firefox ESR"
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
   ],
   "repository": {
     "type": "git",
