@@ -1,34 +1,4 @@
-.catalog-options{
-	margin-top: 0;
-
-	@include media-tablet {
-		margin-top: 125px;
-	}
-}
-
-.catalog-options__header{
-	position: relative;
-
-	color: #111111;
-	font-family: Oswald;
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 24px;
-
-	padding: 0 20px;
-
-	@include media-tablet {
-		font-size: 36px;
-		font-weight: 400;
-		line-height: 36px;
-
-		padding: 0 40px;
-	}
-}
-.options-list{
-	padding: 0 20px;
-}
-.pseudo-header{
+.catalog-pseudo-header{
 	position: relative;
 	top: 0;
 	left: 0;
@@ -41,7 +11,7 @@
 		grid-template-columns: 35px auto 1fr;
 	}
 }
-.pseudo-header__before{
+.catalog-pseudo-header__before{
 	position: relative;
 
 	&::before{
@@ -57,7 +27,7 @@
 		background-color: #68b738;
 	}
 }
-.pseudo-header__after{
+.catalog-pseudo-header__after{
 	position: relative;
 
 	&::after{
