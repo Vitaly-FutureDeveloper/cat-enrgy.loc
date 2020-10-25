@@ -263,6 +263,14 @@
 
 	margin-top: 20px;
 
+	&:hover,
+	&:focus{
+		opacity: 0.8;
+	}
+	&:active{
+		opacity: 0.3;
+	}
+
 	@include media-tablet {
 		justify-self: flex-end;
 	}

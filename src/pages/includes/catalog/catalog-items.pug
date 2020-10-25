@@ -222,9 +222,8 @@ section.catalog-items
 			article.catalog-item__side.catalog-show
 				.catalog-list__image-wrapper
 					picture
-						sourse(media=`min-width: ${mediaWidthTablet}` srcset="img/icon-plus.svg" width="60" height="60")
-						//-sourse(media=`min-width: ${mediaWidthMobile}` srcset="img/icon-plus-mobile.svg" width="30" height="30")
-						img.catalog-show__icon-plus(src="img/icon-plus-mobile.svg" alt="Показать ещё" width="30" height="30")
+						source(media=`(min-width: ${mediaWidthTablet})` srcset="img/icon-plus.svg")
+						img.catalog-show__icon-plus(src="img/icon-plus-mobile.svg" alt="Показать ещё")
 				h3.catalog-show__header Показать еще <br class="catalog-br-tab"> 100500 товаров
 				p.catalog-show__text На самом деле вкусов <br class="catalog-br-tab"> гораздо больше!
 				button.catalog-show__button Показать все
