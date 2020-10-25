@@ -3,40 +3,47 @@ section.catalog-options
 		.catalog-pseudo-header__before
 		h3.catalog-options__header Дополнительные товары
 		.catalog-pseudo-header__after
-	ul.options-list
-		li.options-list__item
-			article.options-list__side
-				h3.options-list__header Сахарозаменитель
-				.options-list__text-price
-					p.options-list__text 1 упаковка (100 г)
-					p.options-list__text 100 Р.
-				button.options-list__button Заказать
 
-		li.options-list__item
-			article.options-list__side
-				h3.options-list__header Питьевая вода
-				.options-list__text-price
-					p.options-list__text 5 литров
-					p.options-list__text 50 Р.
-				button.options-list__button Заказать
+	.catalog-options__wrapper
+		ul.options-list
+			li.options-list__item
+				article.options-list__side
+					h3.options-list__header Сахарозаменитель
+					table.options-list__table
+						tr
+							td.options-list__text.options-list__name 1 упаковка (100 г)
+							td.options-list__text.options-list__price 100 Р.
+					a.options-list__link(href="/catalog-script.php?price=pseudo-sugar" target="_blank") Заказать
 
-		li.options-list__item
-			article.options-list__side
-				h3.options-list__header Молоко
-				.options-list__text-price
-					p.options-list__text 1 литр
-					p.options-list__text 100 Р.
-				button.options-list__button Заказать
+			li.options-list__item
+				article.options-list__side
+					h3.options-list__header Питьевая вода
+					table.options-list__table
+						tr
+							td.options-list__text.options-list__name 5 литров
+							td.options-list__text.options-list__price 50 Р.
+					a.options-list__link(href="/catalog-script.php?price=water" target="_blank") Заказать
 
-		li.options-list__item
-			article.options-list__side
-				h3.options-list__header Витамины
-				.options-list__text-price
-					p.options-list__text 1 упаковка (30 г)
-					p.options-list__text 300 Р.
-				button.options-list__button Заказать
+			li.options-list__item
+				article.options-list__side
+					h3.options-list__header Молоко
+					table.options-list__table
+						tr
+							td.options-list__text.options-list__name 1 литр
+							td.options-list__text.options-list__price 100 Р.
+					a.options-list__link(href="/catalog-script.php?price=milk" target="_blank") Заказать
 
-		li.options-list__item.options-bonus
-			article.options-list__side
-				img.options-list__icon(src="img/icon-gift.svg" width="55" height="60")
-				p.options-bonus__text Закажите все и получите чехол для кота в подарок!
+			li.options-list__item
+				article.options-list__side
+					h3.options-list__header Витамины
+					table.options-list__table
+						tr
+							td.options-list__text.options-list__name 1 упаковка (30 г)
+							td.options-list__text.options-list__price 300 Р.
+					a.options-list__link(href="/catalog-script.php?price=vitamins" target="_blank") Заказать
+
+		.options-bonus__wrapper
+			a.options-bonus__link(href="/catalog-script.php?price=all" target="_blank")
+				article.options-bonus
+					img.options-list__icon(src="img/icon-gift.svg" width="55" height="60")
+					p.options-bonus__text Закажите все <br> и получите чехол для <br> кота в подарок!

@@ -40,7 +40,7 @@ module.exports.serve = function (cb){
 	gulp.watch('src/styles/**/*.scss', gulp.series(styles, cb => gulp.src('build/css').pipe(server.stream()).on('end', cb)));
 	gulp.watch('src/fonts/*.*', gulp.series(fonts)).on('change', server.reload);
 
-	gulp.watch('build/*.html').on('change', server.reload);
+	//gulp.watch('build/*.html').on('change', server.reload);
 
 	return cb();
 };

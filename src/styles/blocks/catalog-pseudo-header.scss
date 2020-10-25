@@ -10,6 +10,10 @@
 	@include media-tablet {
 		grid-template-columns: 35px auto 1fr;
 	}
+
+	@include media-laptop {
+		grid-template-columns: 70px auto 1fr;
+	}
 }
 .catalog-pseudo-header__before{
 	position: relative;
