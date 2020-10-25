@@ -46,5 +46,5 @@ module.exports.serve = function (cb){
 };
 
 module.exports.build = function (done) {
-	run("clean", "html", "styles", "js", "fonts", "img", done);
+	run("clean", "html", "styles", "scripts", "fonts", "img", done);
 }
