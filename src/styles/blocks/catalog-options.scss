@@ -13,11 +13,8 @@
 }
 
 .catalog-options__wrapper{
-	//padding: 0 20px;
-
 	@include media-tablet {
 		margin-top: 55px;
-		//padding: 0 75px;
 	}
 	@include media-laptop {
 		display: grid;
@@ -26,25 +23,19 @@
 		grid-gap: 80px;
 
 		margin-top: 50px;
-		//padding: 0 110px;
 	}
 }
-.catalog-options__header{
+.catalog-options__title{
 	position: relative;
 
 	color: #111111;
-	font-family: Oswald;
 	font-size: 24px;
-	font-weight: 400;
 	line-height: 24px;
 
 	padding: 0 20px;
 
-	margin-bottom: 35px;
-
 	@include media-tablet {
 		font-size: 36px;
-		font-weight: 400;
 		line-height: 36px;
 
 		padding: 0 40px;
@@ -56,15 +47,13 @@
 	padding: 0 20px;
 
 	display: grid;
-	//grid-gap: 10px;
 
-	margin-top: 0;
+	margin-top: 15px;
 	margin-bottom: 40px;
 
 	@include media-tablet {
 		grid-gap: 12px;
 		padding: 0 75px;
-		//margin-top: 55px;
 	}
 	@include media-laptop {
 		padding: 0;
@@ -98,7 +87,7 @@
 		}
 	}
 }
-.options-list__side{
+.options-side{
 	padding: 13px 0;
 
 	@include media-tablet {
@@ -119,7 +108,7 @@
 	}
 }
 
-.options-list__header{
+.options-side__title{
 	color: #222222;
 	font-family: Oswald;
 	font-size: 16px;
@@ -135,7 +124,7 @@
 		line-height: 20px;
 	}
 }
-.options-list__table{
+.options-side__table{
 	width: 100%;
 	border-collapse: collapse;
 
@@ -145,11 +134,8 @@
 		margin-top: 0;
 	}
 }
-.options-list__text{
-	color: #444444;
-	font-family: "Arial MT", Arial, sans-serif;
+.options-side__text{
 	font-size: 14px;
-	font-weight: 400;
 	line-height: 14px;
 	vertical-align: top;
 
@@ -158,7 +144,7 @@
 		text-align: right;
 	}
 }
-.options-list__name{
+.options-side__name{
 	@include media-tablet {
 		text-align: right;
 		width: 70%;
@@ -167,7 +153,7 @@
 		text-align: left;
 	}
 }
-.options-list__price{
+.options-side__price{
 	text-align: right;
 	width: 30%;
 
@@ -175,23 +161,19 @@
 		text-align: center;
 	}
 }
-.options-list__link{
+.options-side__link{
 	@include button-green;
 
-	color: #ffffff;
-	font-family: Oswald;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 20px;
-	font-style: normal;
-	letter-spacing: normal;
 
 	text-align: center;
 
 	width: 280px;
 	height: 40px;
 
-	margin-top: 15px;
+	margin-top: 14px;
 
 	@include media-tablet {
 		grid-column-start: 1;
@@ -290,12 +272,8 @@
 
 .options-bonus__text {
 	color: #ffffff;
-	font-family: "Arial MT", Arial, sans-serif;
 	font-size: 16px;
-	font-weight: 400;
 	line-height: 20px;
-	font-style: normal;
-	letter-spacing: normal;
 
 	text-align: center;
 

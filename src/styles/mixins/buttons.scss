@@ -7,6 +7,9 @@
 	box-sizing: border-box;
 	border: none;
 
+	font-family: Oswald;
+	text-transform: uppercase;
+
 	cursor: pointer;
 
 	transition-duration: 150ms;
@@ -24,8 +27,6 @@
 	@include _buttons;
 
 	color: #ffffff;
-	font-family: Oswald;
-	text-transform: uppercase;
 	background-color: #68b738;
 	
 	&:hover,
@@ -42,8 +43,6 @@
 	@include _buttons;
 	
 	color: #444444;
-	font-family: Oswald;
-	text-transform: uppercase;
 	background-color: #f2f2f2;
 	
 	&:hover,

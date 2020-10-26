@@ -101,9 +101,20 @@
 }
 
 @keyframes animation-after{
-	0% {width: 0;}
-	100% {width: 100%;}
+	0% {
+		width: 0%;
+		filter: grayscale(0);
+	}
+	95%{
+		width: 90%;
+		filter: grayscale(1);
+	}
+	100% {
+		width: 100%;
+		filter: grayscale(0);
+	}
 }
+
 .site-list__link{
 	position: relative;
 
@@ -139,8 +150,9 @@
 			background-color: #68b738;
 
 			animation-name: animation-after;
-			animation-duration: 2s;
+			animation-duration: 1s;
 			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
 		}
 	}
 
