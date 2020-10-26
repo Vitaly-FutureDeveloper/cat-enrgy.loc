@@ -32,20 +32,12 @@
 	}
 }
 
-.example-header{
-	color: #111111;
-	font-size: 36px;
-	font-weight: 400;
-	line-height: 60px;
 
+.example__title{
 	margin-top: 5px;
 	margin-bottom: 25px;
 
 	@include media-tablet {
-		font-size: 60px;
-		font-weight: 400;
-		line-height: 60px;
-
 		margin-bottom: 60px;
 	}
 
@@ -53,34 +45,16 @@
 		position: relative;
 		top: -145px;
 
-		font-size: 60px;
-		font-weight: 400;
-		line-height: 60px;
-
-		background-color: #ffffff;
-
 		margin-bottom: 0;
 	}
 }
-
-.example-text{
-	color: #444444;
-	font-family: "Arial MT", Arial, sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 18px;
-
+.example__text{
 	margin: 0;
 	margin-bottom: 25px;
 
 	@include media-tablet {
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 24px;
-
 		margin-bottom: 55px;
 	}
-
 	@include media-laptop {
 		margin-bottom: 65px;
 	}

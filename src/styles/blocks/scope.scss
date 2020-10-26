@@ -17,18 +17,8 @@
 	}
 }
 
-.scope-header{
-	color: #111111;
-	font-family: Oswald;
-	font-size: 36px;
-	font-weight: 400;
-	line-height: 60px;
-
+.scope__title{
 	@include media-tablet {
-		font-size: 60px;
-		font-weight: 400;
-		line-height: 60px;
-
 		margin-bottom: 65px;
 	}
 
@@ -84,20 +74,8 @@
 	}
 }
 
-.scope-list__item-text{
-	color: #444444;
-	font-family: "Arial MT", Arial, sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 18px;
-	
+.scope-list__text{
 	margin: 0;
-
-	@include media-tablet {
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 24px;
-	}
 }
 
 .bottom-frame{
