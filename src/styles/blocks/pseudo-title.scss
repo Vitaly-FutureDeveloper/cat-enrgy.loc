@@ -1,4 +1,4 @@
-.catalog-pseudo-header{
+.pseudo-title__wrapper{
 	position: relative;
 	top: 0;
 	left: 0;
@@ -15,7 +15,7 @@
 		grid-template-columns: 70px auto 1fr;
 	}
 }
-.catalog-pseudo-header__before{
+.pseudo-title__before{
 	position: relative;
 
 	&::before{
@@ -31,7 +31,7 @@
 		background-color: #68b738;
 	}
 }
-.catalog-pseudo-header__after{
+.pseudo-title__after{
 	position: relative;
 
 	&::after{

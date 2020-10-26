@@ -71,7 +71,7 @@
 		background-color: white;
 		border: 1px solid whitesmoke;
 		border-radius: 50%;
-		background-image:  linear-gradient(#f9eec7, #ffb60f);//radial-gradient(circle at 5%, orange 10%, yellow, #DBFF55FF);
+		background-image:  linear-gradient(#f9eec7, #ffb60f);
 
 		z-index: 1001;
 
@@ -191,13 +191,6 @@ input[type="number"],
 input[type="number"]:invalid{
 	padding: 0 15px;
 }
-/*
-input[type="text"]:invalid,
-input[type="tel"]:invalid,
-input[type="email"]:invalid,
-input[type="number"]:invalid{
-	border: 2px solid #ff8282;
-}*/
 
 .input-invalid{
 	border: 2px solid #ff8282;
