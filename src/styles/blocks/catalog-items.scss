@@ -23,7 +23,7 @@
 		display: grid;
 		grid-template-columns: auto auto;
 		grid-auto-rows: auto;
-		grid-gap: 140px 60px;
+		grid-gap: 70px 60px;
 
 		align-items: stretch;
 		
@@ -36,7 +36,7 @@
 
 	@include media-laptop {
 		grid-template-columns: auto auto auto auto;
-		grid-gap: 140px 65px;
+		grid-gap: 80px 65px;
 	}
 }
 
@@ -83,7 +83,7 @@
 	@include media-tablet {
 		
 		background-color: #f2f2f2;
-		height: 431px;
+		min-height: 431px;
 
 		transform: translateY(90px);
 	}

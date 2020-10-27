@@ -103,10 +103,6 @@
 @keyframes animation-after{
 	0% {
 		width: 0%;
-		filter: grayscale(0);
-	}
-	95%{
-		width: 90%;
 		filter: grayscale(1);
 	}
 	100% {

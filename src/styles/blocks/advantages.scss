@@ -165,7 +165,7 @@
 
 		position: absolute;
 
-		top: 11px;
+		top: 30%;
 		left: 97px;
 
 		width: 24px;
@@ -179,24 +179,31 @@
 		transition-duration: 150ms;
 		transition-property: width, top;
 	}
-	
+
+	&:hover::after,
+	&:focus::after{
+		top: 25%;
+		width: 33px;
+	}
+	&:active{
+		opacity: 0.3;
+	}
 
 	@include media-tablet {
 		font-size: 20px;
 		line-height: 20px;
 
 		&::after{
+			top: 40%;
 			left: 130px;
+		}
+		&:hover::after,
+		&:focus::after{
+			top: 35%;
+			width: 33px;
 		}
 	}
 
-	&:hover::after, 
-	&:focus::after{
-		top: 10px;
-		width: 33px;
-	}
-	&:active{
-		opacity: 0.3;
-	}
+
 }
 
