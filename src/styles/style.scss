@@ -7,13 +7,13 @@
 @import 'mixins/sprites-viewport.scss';
 @import 'mixins/visually-hidden';
 
-
 @import 'common/global.scss';
+
+
 @import 'common/header.scss';
 
 @import 'blocks/title.scss';
 @import 'blocks/text.scss';
-@import 'blocks/text-special.scss';
 
 @import 'blocks/poster.scss';
 @import 'blocks/advantages.scss';
@@ -34,17 +34,6 @@
 @import 'blocks/catalog-head.scss';
 @import 'blocks/catalog-items.scss';
 @import 'blocks/catalog-options.scss';
-
-
-//
-//
-//
-
-
-
-
-
-
 
 
 @import 'common/footer.scss';
