@@ -1,3 +1,4 @@
+/*
 const arrayFilesConcate = [
 	"src/scripts/components/global.js",
 	
@@ -11,7 +12,17 @@ const arrayFilesConcate = [
 
 	"src/scripts/components/form.js",
 ];
+*/
 
+const arrayFilesConcate = [
+	"src/scripts/components/global.js",
+	"src/scripts/interactive/navigation.js",
+	"src/scripts/components/load.js",
+	"src/scripts/form/validation.js",
+	"src/scripts/form/send.js",
+
+
+];
 
 
 

@@ -32,7 +32,7 @@ let validInputs = [inputName, inputWeight, inputMail, inputTel];
 for(let i = 0; i < validInputs.length; i++){
 	validInputs[i].addEventListener('invalid', function(){
 		let validity = validInputs[i].validity;
-		if(validity.valueMissing){
+			if(validity.valueMissing){
 				validInputs[i].setCustomValidity("Поле обязательно должно быть введено");
 			}
 			if(validity.patternMismatch){

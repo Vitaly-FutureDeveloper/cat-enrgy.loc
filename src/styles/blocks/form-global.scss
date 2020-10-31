@@ -43,8 +43,8 @@
 		top: 42%;
 		left: 48%;
 
-		width: 3%;
-		height: 6%;
+		width: 10px;
+		height: 10px;
 
 		background-color: white;
 		border: 1px solid whitesmoke;
@@ -65,8 +65,8 @@
 		top: 40%;
 		left: 47%;
 
-		width: 5%;
-		height: 10%;
+		width: 12px;
+		height: 12px;
 
 		background-color: white;
 		border: 1px solid whitesmoke;
@@ -81,14 +81,20 @@
 		animation-timing-function: linear;
 	}
 }
-.snippet-loading__text{
+.snippet-loading__info{
 	position: relative;
 	top: 45vh;
 	left: 0;
 
-	font: inherit;
 	color: black;
+	opacity: 1;
 
+	text-align: center;
+}
+.snippet-loading__text{
+	position: relative;
+	top: 40vh;
+	left: 0;
 	text-align: center;
 }
 
@@ -148,16 +154,20 @@
 		grid-gap: 15px;
 	}
 }
+.field-block{
+	position: relative;
+}
 
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="number"],
-input[type="text"]:invalid,
+/*input[type="text"]:invalid,
 input[type="tel"]:invalid,
 input[type="email"]:invalid,
-input[type="number"]:invalid{
+input[type="number"]:invalid*/{
 	height: 45px;
+
 	border: 1px solid rgba(204, 204, 204, 0.5);
 
 	padding: 15px;
@@ -187,11 +197,25 @@ input[type="number"]:invalid{
 	}
 }
 
+input:invalid,
+input:invalid:hover,
+input:invalid:focus,
+input:invalid:active{
+	outline: none;
+	border: none;
+	box-shadow: none;
+	background: transparent;
+}
+
 input[type="number"],
 input[type="number"]:invalid{
 	padding: 0 15px;
 }
 
 .input-invalid{
-	border: 2px solid #ff8282;
+	border: 2px solid #ff8282 !important;
+	&:focus,
+	&:active{
+		border: 2px solid #ff8282 !important;
+	}
 }
