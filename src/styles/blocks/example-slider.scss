@@ -352,6 +352,7 @@
 }
 
 .slider-progress__checker{
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -377,9 +378,7 @@
 }
 
 .slider-progress__checker-set{
-	position: relative;
-	top: 0;
-	left: 0;
+	position: absolute;
 
 	width: 35px;
 	height: 6px;
@@ -387,9 +386,15 @@
 	background-color: #68b738;
 
 	@include media-tablet {
+		top: 0;
+		left: 0;
 		width: 94%;
 		background: transparent;
 	}
+}
+
+.set-after{
+	right: 4px;
 }
 
 .slider-progress__checker-check{

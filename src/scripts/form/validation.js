@@ -1,4 +1,5 @@
 (function () {
+
 	var message = {
 		valueMissing : "Поле обязательно должно быть введено",
 		rangeOverflow : "Значение не может быть больше ",
@@ -22,30 +23,24 @@
 			classInvalid.add(this);
 
 			if (this.validity.valueMissing) {
-				//this.setCustomValidity(message.valueMissing);
 				insertElem(this, message.valueMissing);
 			}
 			if (this.validity.rangeOverflow) {
 				var max = this.getAttribute('max');
 				insertElem(this, message.rangeOverflow + max);
-				//this.setCustomValidity(message.rangeOverflow + max);
 			}
 			if (this.validity.rangeUnderflow) {
 				var min = this.getAttribute('min');
 				insertElem(this, message.rangeUnderflow + min);
-				//this.setCustomValidity(message.rangeOverflow + min);
 			}
 			if (this.validity.tooLong) {
 				insertElem(this, message.tooLong);
-				//this.setCustomValidity(message.tooLong);
 			}
 			if (this.validity.tooShort) {
-				//this.setCustomValidity(message.tooShort);
 				insertElem(this, message.tooShort);
 			}
 			if (this.validity.patternMismatch) {
 				insertElem(this, message.patternMismatch);
-				//this.setCustomValidity(message.patternMismatch);
 			}
 		} else {
 			classInvalid.off(this);
@@ -70,8 +65,10 @@
 		leed.appendChild(element);
 	};
 
-	for(var i = 0; i < validInputs.length; i++){
-		validInputs[i].addEventListener('input', onValidator);
+	if(window.inPage.classList.contains('page-form')) {
+		for (var i = 0; i < validInputs.length; i++) {
+			validInputs[i].addEventListener('input', onValidator);
+		}
 	}
 
 })();

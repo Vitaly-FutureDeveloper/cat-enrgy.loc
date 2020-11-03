@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('hello');
+window.inPage = document.querySelector('.page-main');
 
 var onError = function (message) {
 	console.error(message);
