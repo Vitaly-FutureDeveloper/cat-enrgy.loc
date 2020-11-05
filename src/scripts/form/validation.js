@@ -65,7 +65,7 @@
 		leed.appendChild(element);
 	};
 
-	if(window.inPage.classList.contains('page-form')) {
+	if(IN_FORM) {
 		for (var i = 0; i < validInputs.length; i++) {
 			validInputs[i].addEventListener('input', onValidator);
 		}

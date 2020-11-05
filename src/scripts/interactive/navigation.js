@@ -1,5 +1,7 @@
 (function () {
 
+	const LINK_ACTIVE = 'site-list__link--active';
+
 	var mainNav = document.querySelector('.main-nav');
 	var buttonToggle = document.querySelector(".main-nav__toggle");
 	var listLinks = document.querySelectorAll('.site-list__link');
@@ -13,13 +15,13 @@
 		mainNav.classList.add("inner-page");
 
 		for(let i = 0; i < listLinks.length; i++){
-			listLinks[i].classList.remove('site-list__link--active');
+			listLinks[i].classList.remove(LINK_ACTIVE);
 		}
-		if(window.inPage.classList.contains('page-catalog')){
-			listLinks[1].classList.add('site-list__link--active')
+		if(IN_CATALOG){
+			listLinks[1].classList.add(LINK_ACTIVE);
 		}
-		if(window.inPage.classList.contains('page-form')){
-			listLinks[2].classList.add('site-list__link--active')
+		if(IN_FORM){
+			listLinks[2].classList.add(LINK_ACTIVE);
 		}
 	}
 
