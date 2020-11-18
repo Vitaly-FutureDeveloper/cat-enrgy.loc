@@ -1,0 +1,33 @@
+section{
+	transition-property: all;
+	transition-duration: 400ms;
+	transition-timing-function: ease;
+	//transition-delay: 0;
+
+	transform: translateY(20%);
+	opacity: 0;
+}
+p{
+	transition-property: all;
+	transition-duration: 600ms;
+	transition-timing-function: ease;
+	transition-delay: 55ms;
+
+	transform: translateY(-80%);
+	opacity: 0;
+}
+section.anti-animate{
+	transform: translateY(-20%);
+}
+section.animate{
+	transform: translateY(0);
+	opacity: 1;
+}
+
+p.anti-animate{
+	transform: translateY(80%);
+}
+p.animate{
+	transform: translateY(0);
+	opacity: 1;
+}

@@ -11,7 +11,7 @@ const concat = require('gulp-concat');
 var concatOption = require('../../src/scripts/main.js');
 
 module.exports = function scripts(cb){
-	gulp.src(concatOption)
+	gulp.src(concatOption).on('data', function(file){ console.log(file);})
 		.pipe(plumber())
 		//.pipe(eslint())
 		//.pipe(eslint.format())
