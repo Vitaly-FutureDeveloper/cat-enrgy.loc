@@ -1,7 +1,7 @@
 var validatorAllInputs = function (inputs) {
 	/*
-	Универсальная валидация форм
-	@param inputs {array} всех DOM input для валидации
+	* Универсальная валидация форм
+	* @param inputs {array} всех DOM input для валидации
 	 */
 
 	var message = {
@@ -15,7 +15,7 @@ var validatorAllInputs = function (inputs) {
 
 	var onValidator = function () {
 		/*
-		Проверка input на валидность по событию
+		* Проверка input на валидность по событию
 		 */
 		var element = document.querySelector('.new-element');
 		if(element)
@@ -26,57 +26,57 @@ var validatorAllInputs = function (inputs) {
 
 			if (this.validity.valueMissing) {
 				/*
-				Показ DOM элемента при невалидном поле
-				@param here {Object} DOM элемент input на котором произошло событие Invalid
-				@param text {String} Текст выводимого сообщения
-				:void
+				* Показ DOM элемента при невалидном поле
+				* @param here {Object} DOM элемент input на котором произошло событие Invalid
+				* @param text {String} Текст выводимого сообщения
+				* :void
 				 */
 				insertElem(this, message.valueMissing);
 			}
 			if (this.validity.rangeOverflow) {
 				var max = this.getAttribute('max');
 				/*
-				Показ DOM элемента при невалидном поле
-				@param here {Object} DOM элемент input на котором произошло событие Invalid
-				@param text {String} Текст выводимого сообщения
-				:void
+				* Показ DOM элемента при невалидном поле
+				* @param here {Object} DOM элемент input на котором произошло событие Invalid
+				* @param text {String} Текст выводимого сообщения
+				* :void
 				 */
 				insertElem(this, message.rangeOverflow + max);
 			}
 			if (this.validity.rangeUnderflow) {
 				var min = this.getAttribute('min');
 				/*
-				Показ DOM элемента при невалидном поле
-				@param here {Object} DOM элемент input на котором произошло событие Invalid
-				@param text {String} Текст выводимого сообщения
-				:void
+				* Показ DOM элемента при невалидном поле
+				* @param here {Object} DOM элемент input на котором произошло событие Invalid
+				* @param text {String} Текст выводимого сообщения
+				* :void
 				 */
 				insertElem(this, message.rangeUnderflow + min);
 			}
 			if (this.validity.tooLong) {
 				/*
-				Показ DOM элемента при невалидном поле
-				@param here {Object} DOM элемент input на котором произошло событие Invalid
-				@param text {String} Текст выводимого сообщения
-				:void
+				* Показ DOM элемента при невалидном поле
+				* @param here {Object} DOM элемент input на котором произошло событие Invalid
+				* @param text {String} Текст выводимого сообщения
+				* :void
 				 */
 				insertElem(this, message.tooLong);
 			}
 			if (this.validity.tooShort) {
 				/*
-				Показ DOM элемента при невалидном поле
-				@param here {Object} DOM элемент input на котором произошло событие Invalid
-				@param text {String} Текст выводимого сообщения
-				:void
+				* Показ DOM элемента при невалидном поле
+				* @param here {Object} DOM элемент input на котором произошло событие Invalid
+				* @param text {String} Текст выводимого сообщения
+				* :void
 				 */
 				insertElem(this, message.tooShort);
 			}
 			if (this.validity.patternMismatch) {
 				/*
-				Показ DOM элемента при невалидном поле
-				@param here {Object} DOM элемент input на котором произошло событие Invalid
-				@param text {String} Текст выводимого сообщения
-				:void
+				* Показ DOM элемента при невалидном поле
+				* @param here {Object} DOM элемент input на котором произошло событие Invalid
+				* @param text {String} Текст выводимого сообщения
+				* :void
 				 */
 				insertElem(this, message.patternMismatch);
 			}
@@ -87,10 +87,10 @@ var validatorAllInputs = function (inputs) {
 
 	var toggleClassInvalid =  {
 		/*
-		Class
-		@param t {Object} DOM элемент input на котором произошло событие Invalid
-		@return add {Method} Добавляет класс '.input-invalid' DOM элементу input
-		@return off {Method} Удаляет класс '.input-invalid'
+		* Class
+		* @param t {Object} DOM элемент input на котором произошло событие Invalid
+		* @return add {Method} Добавляет класс '.input-invalid' DOM элементу input
+		* @return off {Method} Удаляет класс '.input-invalid'
 		 */
 		add: (t) => {
 			t.classList.add('input-invalid')
@@ -102,10 +102,10 @@ var validatorAllInputs = function (inputs) {
 
 	var insertElem = function (here, text) {
 		/*
-		Показ DOM элемента при невалидном поле
-		@param here {Object} DOM элемент input на котором произошло событие Invalid
-		@param text {String} Текст выводимого сообщения
-		:void
+		* Показ DOM элемента при невалидном поле
+		* @param here {Object} DOM элемент input на котором произошло событие Invalid
+		* @param text {String} Текст выводимого сообщения
+		* :void
 		 */
 		var leed = here.parentNode;
 		var element = document.createElement('p');

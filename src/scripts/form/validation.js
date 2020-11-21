@@ -12,9 +12,9 @@
 	var validInputs = [inputName, inputWeight, inputAge, inputMail, inputTel];
 
 	/*
-	Универсальная валидация форм
-	:components/validator.js
-	@param inputs {array} всех DOM input для валидации
+	* Универсальная валидация форм
+	* :components/validator.js
+	* @param inputs {array} всех DOM input для валидации
 	 */
 	validatorAllInputs(validInputs);
 })();

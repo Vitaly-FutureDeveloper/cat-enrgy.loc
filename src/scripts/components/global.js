@@ -3,8 +3,8 @@
 window.inPage = document.querySelector('.page-main');
 
 /*
-Константы для проверки: находимся ли мы на данной странице
-@boolean
+*Константы для проверки: находимся ли мы на данной странице
+*@boolean
  */
 const IN_INDEX = window.inPage.classList.contains('page-index');
 const IN_FORM = window.inPage.classList.contains('page-form');
@@ -12,16 +12,16 @@ const IN_CATALOG = window.inPage.classList.contains('page-catalog');
 
 window.onError = function (message) {
 	/*
-	Обработка ошибок
-	@param {string} сведения от ошибке
- */
+	*Обработка ошибок
+	*@param {string} сведения от ошибке
+  */
 	console.error(message);
 };
 
 window.onSuccess = function (xhr) {
 	/*
-	Обработка ответа от сервера при AJAX запросе
-	@param {object}
+	*Обработка ответа от сервера при AJAX запросе
+	*@param {object}
  */
 	var message = {
 		loading: "Загрузка",

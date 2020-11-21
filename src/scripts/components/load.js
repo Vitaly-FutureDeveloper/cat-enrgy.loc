@@ -2,10 +2,10 @@
 
 	window.load = function(data, onSuccess, URL){
 		/*
-		Отправка AJAX запроса на сервер
-		@param data {Object} new FormData(form)
-		@param onSuccess {func} Обработка ответа от сервера при AJAX запросе
-		@param URL {string} link сервера
+		* Отправка AJAX запроса на сервер
+		* @param data {Object} new FormData(form)
+		* @param onSuccess {func} Обработка ответа от сервера при AJAX запросе
+		* @param URL {string} link сервера
 		 */
 		var xhr = new XMLHttpRequest();
 		var obj = {};
@@ -14,9 +14,9 @@
 
 		xhr.addEventListener('readystatechange', function () {
 			/*
-			Обработка ответа от сервера при AJAX запросе
-			:components/global.js
-			@param {object}
+			* Обработка ответа от сервера при AJAX запросе
+			* :components/global.js
+			* @param {object}
 		 */
 			window.onSuccess(xhr);
 		});

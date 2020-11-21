@@ -3,8 +3,8 @@
 
 	window.trottle = function (onFunction) {
 		/*
-		//Троттлинг для событий, например скролл
-		@param {function} рабочая функция
+		* //Троттлинг для событий, например скролл
+		* @param {function} рабочая функция
 		*/
 		if (!isScrolling){
 			window.requestAnimationFrame(function () {

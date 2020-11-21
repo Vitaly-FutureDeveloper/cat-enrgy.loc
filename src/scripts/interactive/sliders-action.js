@@ -10,8 +10,9 @@
 	if(IN_INDEX) {
 		if (window.innerWidth >= VIEWPORT_TABLET) {
 			/*
-			Слайдер для tablet viewport и более
-			 */
+			* Слайдер для tablet viewport и более
+			*/
+
 			let sliderChecker = document.querySelector('.slider-progress__checker-check');
 
 			sliderChecker.addEventListener('mousedown', function (evt) {
@@ -37,13 +38,20 @@
 					slideBefore.style.clip = `rect(auto, ${checkerHere * 2}px, auto, auto)`;
 				}
 
-				sliderProgress.addEventListener('mousemove', onMouseMove);
+				sliderProgress.addEventListener('mousemove', function(moveEvt){
+					/*
+					* //Троттлинг для событий, например скролл
+					* @param {function} рабочая функция
+					*/
+					window.trottle( onMouseMove.bind(this, moveEvt) );
+				} );
+
 				document.addEventListener('mouseup', onMouseUp);
 			});
 		} else {
 			/*
-			Слайдер для mobile viewport
-			 */
+			* Слайдер для mobile viewport
+			*/
 			sliderProgress.addEventListener('mousedown', function () {
 				if (sliderSet.classList.contains(CLASS_CHECK)) {
 					slideBefore.style.display = 'block';
