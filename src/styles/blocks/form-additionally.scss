@@ -31,6 +31,7 @@
 	position: relative;
 
 	padding-left: 50px;
+	transition: all 50ms;
 
 	&::before{
 		content: "";

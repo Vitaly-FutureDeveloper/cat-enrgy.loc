@@ -159,14 +159,28 @@
 	position: relative;
 }
 
+
+input:invalid,
+input:invalid:hover,
+input:invalid:focus,
+input:invalid:active{
+	outline: none;
+	//border: none;
+	box-shadow: none;
+	background: transparent;
+}
+
+input[type="number"],
+input[type="number"]:invalid{
+	padding: 0 15px;
+}
+
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="number"],
-/*input[type="text"]:invalid,
-input[type="tel"]:invalid,
-input[type="email"]:invalid,
-input[type="number"]:invalid*/{
+textarea{
+	transition: all 150ms !important;
 	height: 45px;
 
 	border: 1px solid rgba(204, 204, 204, 0.5);
@@ -198,20 +212,6 @@ input[type="number"]:invalid*/{
 	}
 }
 
-input:invalid,
-input:invalid:hover,
-input:invalid:focus,
-input:invalid:active{
-	outline: none;
-	border: none;
-	box-shadow: none;
-	background: transparent;
-}
-
-input[type="number"],
-input[type="number"]:invalid{
-	padding: 0 15px;
-}
 
 .input-invalid{
 	border: 2px solid #ff8282 !important;

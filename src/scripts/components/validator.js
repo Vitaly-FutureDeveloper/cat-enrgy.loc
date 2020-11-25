@@ -1,5 +1,5 @@
 var validatorAllInputs = function (inputs) {
-	/*
+	/**
 	* Универсальная валидация форм
 	* @param inputs {array} всех DOM input для валидации
 	 */
@@ -107,14 +107,16 @@ var validatorAllInputs = function (inputs) {
 		* @param text {String} Текст выводимого сообщения
 		* :void
 		 */
+		const STYLE_TEXT = 'font-size: 10px; color: red; text-transform: uppercase; position: absolute; top: -50%; left:20%; z-index:500; opacity:1;';
 		var leed = here.parentNode;
 		var element = document.createElement('p');
 
 		element.textContent = text;
 		element.classList.add('new-element');
-		element.style.cssText = 'font-size: 10px; color: red; text-transform: uppercase; position: absolute; top: -50%; left:20%';
+		element.style.cssText = STYLE_TEXT;
 
 		leed.appendChild(element);
+		console.log(leed);
 	};
 
 	if(IN_FORM) {
