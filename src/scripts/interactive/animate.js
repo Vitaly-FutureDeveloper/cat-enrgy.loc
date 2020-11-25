@@ -14,7 +14,7 @@
 	* в файле должны быть готовы css-анимации
 	* При удалении селектора, должны быть удалены и в файле animate.scss
 	*/
-	const TAGS = 'section, p, svg, .scope-list__image-wrapper';
+	const TAGS = 'section, fieldset, p, svg, label, .scope-list__image-wrapper';
 
 	var selectors = document.querySelectorAll(TAGS);
 

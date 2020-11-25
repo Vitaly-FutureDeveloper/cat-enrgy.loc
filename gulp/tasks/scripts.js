@@ -13,15 +13,15 @@ var concatOption = require('../../src/scripts/main.js');
 module.exports = function scripts(cb){
 	gulp.src(concatOption).on('data', function(file){ console.log(file);})
 		.pipe(plumber())
+		.pipe(concat('main.js'))
 		//.pipe(eslint())
 		//.pipe(eslint.format())
-		.pipe(concat('main.js'))
-	/*	.pipe(sourcemaps.init())
+		.pipe(sourcemaps.init())
 		.pipe(babel({
 			presets: ['@babel/env']
 		}))
 		.pipe(terser())
-		.pipe(sourcemaps.write())*/
+		.pipe(sourcemaps.write())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('build/js'))
 	return cb()

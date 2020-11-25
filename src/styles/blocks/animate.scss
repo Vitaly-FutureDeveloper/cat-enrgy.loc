@@ -1,4 +1,4 @@
-section{
+section, fieldset{
 	transition-property: all;
 	transition-duration: 400ms;
 	transition-timing-function: ease;
@@ -52,26 +52,57 @@ svg{
 	}
 }
 
+label{
+	transition-property: all;
+	transition-duration: 600ms;
+	transition-timing-function: ease;
+	transition-delay: 55ms;
+
+	opacity: 0;
+
+	&.anti-animate{
+		opacity: 0.5;
+	}
+
+	&.animate{
+		opacity: 1;
+	}
+}
+
 .scope-list__image-wrapper{
-	/* Анимация тяжёлая, поэтому только на компьютерах и планшетах */
-	@include media-tablet {
+	transition-property: all;
+	transition-duration: 3s;
+	transition-timing-function: ease;
+	transition-delay: 55ms;
+
+	clip-path: polygon(100% 100%, 100% 0, 0 100%, 0 0);
+	opacity: 0;
+
+	&.anti-animate {
+		clip-path: polygon(100% 100%, 0 100%, 100% 0, 0 0);
+		opacity: 0.1;
+	}
+	&.animate {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		opacity: 1;
+	}
+
+	/* Анимация тяжёлая, поэтому только на компьютерах */
+	@include media-laptop {
 		transition-property: all;
 		transition-duration: 3s;
 		transition-timing-function: ease;
 		transition-delay: 55ms;
 
-		//clip-path: circle(1%);
 		clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-		opacity: 0.8;
+		opacity: 0.1;
 
 		&.anti-animate {
-			//clip-path: circle(60%);
 			clip-path: polygon(0 0, 100% 100%, 0 0, 100% 100%, 0 0, 100% 100%);
-			opacity: 0.8;
+			opacity: 0;
 		}
 		&.animate {
-			//clip-path: circle(100%);
-			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 100% 2%);
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 100% 0);
 			opacity: 1;
 		}
 	}

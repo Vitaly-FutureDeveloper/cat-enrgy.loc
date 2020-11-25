@@ -11,7 +11,7 @@ module.exports = function pug2html(cb) {
 	.pipe(plumber())
 	.pipe(pug())
 	.pipe(htmlValidator())
-	//.pipe(bemValidator())
+	.pipe(bemValidator())
 	.pipe(beautify_html({
 		"indent_size": 2
 	}))

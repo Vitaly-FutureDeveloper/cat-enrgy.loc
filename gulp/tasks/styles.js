@@ -13,9 +13,8 @@ module.exports = function styles(cb){
 	.pipe(plumber())
 	.pipe(sass())
 	.pipe(shorthand())
-	
 	.pipe(autoprefixer())
-	//.pipe(cleanCss())
+	.pipe(cleanCss())
 	.pipe(sourcemaps.init())
 	.pipe(cssbeautify({
 		indent: '	',

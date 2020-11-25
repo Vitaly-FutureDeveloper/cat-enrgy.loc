@@ -1,3 +1,12 @@
+/**
+ * Разработчик фронтенд проекта: Vitali-Future-Developer
+ * Макет: HTML Academy "Cat-Energy"
+ * Дизайн макета, для вёрстки: HTML Academy
+ * Описание: Учебно-личный проект, "Cat-Energy", с шуточным контентом. Выполненный без наставника.
+ * Файл сборки JS скрипта. В ТЗ не было задания для оживления сайта при помощи JS, AJAX, Slider.
+ * Сделан для практики.
+ */
+
 const arrayFilesConcate = [
 	"src/scripts/components/global.js",
 	"src/scripts/components/load.js",

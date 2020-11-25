@@ -2,18 +2,30 @@ include ../untils/variables
 include ../untils/mixins
 
 doctype html
+//
+	*
+	* Разработчик фронтенд проекта: Vitali-Future-Developer
+	* Макет: HTML Academy "Cat-Energy"
+	* Дизайн макета, для вёрстки: HTML Academy
+	* Описание: Учебно-личный проект, "Cat-Energy", с шуточным контентом. Выполненный без наставника.
+	* Сделан для практики и обучения Препроцессору PUG.
+
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		//
+			Оптимизация предзагрузки стилей
 		link(rel="preload" href="css/style.css" as="style")
+		//
+			Оптимизация предзагрузки шрифтов
 		link(rel="preload" href="css/fonts/oswaldmedium.woff2" as="font")
 		link(rel="preload" href="css/fontsoswaldmedium.woff" as="font")
 		link(rel="preload" href="css/fonts/oswaldregular.woff2" as="font")
 		link(rel="preload" href="css/fonts/oswaldregular.woff" as="font")
-		link(rel="preload" href="css/fonts" as="font")
 		link(rel="stylesheet" href="css/style.css")
+
 		title Cat-Energy
 	body
 		include ./header
